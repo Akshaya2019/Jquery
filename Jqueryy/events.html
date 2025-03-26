@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1>Events in Jquery</h1>
+    <img src="images/flower.webp" alt="js" id="img1">
+    <button id="btn" onclick="fun1()">Click me</button>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // function fun1(){
+        //     document.getElementById("img1").style.width="500px";
+        // }
+
+
+        //without onclick
+        // $("button").click(fun2);
+        // function fun2(){
+        //     $("#img1").css('width','500px')
+        // }
+
+        //also write as, anonyms 
+        // $("button").click(function(){
+        //     $("#img1").css('width','300px')
+        // })
+
+        //ready func
+        //reday function is load after the html is fully load
+        $("document").ready(function(){
+            $("button").dblclick(function(){
+            $("#img1").css('width','300px')
+        }) 
+        
+        })
+    </script>
+</body>
+</html>
