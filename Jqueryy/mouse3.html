@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events3</title>
+    <style>
+        #img2{
+            height: 200px;
+            width: 200px;
+            opacity: 0.6;
+        }
+    </style>
 </head>
 <body>
     <h1>Events</h1>
@@ -15,7 +22,9 @@
     <button id="btn2">Show</button>
     <button id="btn3">Toggle</button>
     <br><br>
+    <button id="animates">Animate</button><br>
     <img src="images/flower.webp" alt="JavaScript" id="img2">
+    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -37,15 +46,46 @@
             // }
 
             //2nd image
-            $("#btn1").click(function(){
-                $("#img2").hide()
+            // $("#btn1").click(function(){
+            //     $("#img2").hide()
+            // })
+            // $("#btn2").click(function(){
+            //     $("#img2").show(2000)
+            // })
+            // $("#btn2").click(function(){
+            //     $("#img2").toggle(2000)
+            // })
+
+
+            //Animate
+            // $("#animates").click(function(){
+            //     $("#img2").animate({
+            //         left:'150px',
+            //         opacity:'1',
+            //         height:"400px",
+            //         width:"400px"
+            //     },2000,function(){
+            //         alert("Animated")
+            //     })
+                // alert("animated") // The alert will show before animated, so use use function
+            // })
+
+
+
+            // Animated too
+            // $("#btn").click(function(){
+            //     $("#img").slideUp(2000,function(){
+            //         $("#img").slideDown(2000);
+            //     })
+            // })
+
+
+            //Animate CSS
+            $("#animates").click(function(){
+                $("#img2").slideUp(2000).css('opacity','1').slideDown(3000).fadeOut(2000).fadeIn(2000)
             })
-            $("#btn2").click(function(){
-                $("#img2").show(2000)
-            })
-            $("#btn2").click(function(){
-                $("#img2").toggle(2000)
-            })
+
+
 
         })
     </script>
