@@ -31,6 +31,9 @@
     <button id="btn3">Prepand</button>
     <button id="beforee">Before</button>
     <button id="afterr">After</button> 
+<br><br>
+    <button id="removee">Remove</button>
+    <button id="emptyy">Empty</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -69,13 +72,32 @@
             // })
 
 
+
+            //append is inside the div and after the html para
             $("#btn2").click(function(){
                 $(".div1").append("<img src='images/flower.webp' width='100' height='100'>")
             })
+            //prepand is inside the div and before the html para
             $("#btn3").click(function(){
                 $(".div1").prepend("<p>This is my para</p>")
             })
+            //before is before the div box
+            $("#beforee").click(function(){
+                $(".div1").before("<p>This is my before para</p>")
+            })
+            //after is before the div box
+            $("#afterr").click(function(){
+                $(".div1").after("<p>This is my after para</p>")
+            })
 
+
+            //Remove & Empty
+            $("#removee").click(function(){
+                $(".div1").remove()
+            })
+            $("#emptyy").click(function(){
+                $(".div1").empty()
+            })
 
         });
     </script>
